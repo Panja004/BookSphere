@@ -95,4 +95,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any inquiries, reach out to [**yourname@example.com**](mailto:anishpanj026@example.com)
+For any inquiries, reach out to [**anishpanj026@gmail.com**](mailto:anishpanj026@example.com)
