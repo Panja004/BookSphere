@@ -478,14 +478,6 @@ export const FOOTER_CONTACT_INFO = {
   ],
 };
 
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-  FaLinkedin,
-} from "react-icons/fa";
-
 export const SOCIALS = {
   title: "Social",
   links: [
