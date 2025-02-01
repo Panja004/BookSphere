@@ -37,19 +37,23 @@ const NewArrivals = () => {
           clickable: true,
         }}
         breakpoints={{
-          400: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          260: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 15,
           },
-          700: {
+          455: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
-          1024: {
+          755: {
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 25,
           },
-          1200: {
+          1055: {
             slidesPerView: 5,
             spaceBetween: 30,
           },
