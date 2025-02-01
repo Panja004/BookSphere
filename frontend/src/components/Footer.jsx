@@ -14,16 +14,13 @@ const Footer = () => {
         </p>
         <hr className="my-8 bg-slate-900/30 h-[2px]" />
         {/* container */}
-        <div
-          className="flex justify-between flex-wrap gap-2
-                "
-        >
+        <div className="flex justify-between flex-wrap gap-2">
           <div className="max-w-sm">
             {/* logo */}
             <Link to={"/"} className="flex-1 flex items-center justify-start">
               <img
                 src={logo}
-                alt=""
+                alt="BookSphere logo"
                 height={36}
                 width={36}
                 className="hidden sm:flex mr-2"
@@ -71,13 +68,19 @@ const Footer = () => {
                 ))}
               </FooterColumn>
             </div>
-            <div className="flex ">
+            <div className="flex">
               <FooterColumn title={SOCIALS.title}>
                 <ul className="flex gap-4">
                   {SOCIALS.links.map((link) => (
-                    <Link to="/" key={link.id} className="text-xl">
+                    <a
+                      href={link.link} // Using the 'link' property for the social media URL
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={link.id}
+                      className="text-xl"
+                    >
                       {link.icon}
-                    </Link>
+                    </a>
                   ))}
                 </ul>
               </FooterColumn>
@@ -86,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
       {/* copyrights */}
-      <p className="text-white bg-tertiary medium-14 py-2 px-8 rounded flexBetween ">
+      <p className="text-white bg-tertiary medium-14 py-2 px-8 rounded flexBetween">
         <span>2025 BookSphere</span>
         <span>All rights reserved</span>
       </p>

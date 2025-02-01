@@ -478,13 +478,41 @@ export const FOOTER_CONTACT_INFO = {
   ],
 };
 
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
+
 export const SOCIALS = {
   title: "Social",
   links: [
-    { icon: <FaFacebook />, id: "facebook" },
-    { icon: <FaInstagram />, id: "instagram" },
-    { icon: <FaTwitter />, id: "twitter" },
-    { icon: <FaYoutube />, id: "youtube" },
-    { icon: <FaLinkedin />, id: "linkedin" },
+    {
+      icon: <FaFacebook />,
+      id: "facebook",
+      link: "https://www.facebook.com/anish.panja.9/",
+    },
+    {
+      icon: <FaInstagram />,
+      id: "instagram",
+      link: "https://www.instagram.com/anish_cr_2004/",
+    },
+    {
+      icon: <FaTwitter />,
+      id: "twitter",
+      link: "https://x.com/panja_anish",
+    },
+    {
+      icon: <FaYoutube />,
+      id: "youtube",
+      link: "https://www.youtube.com/",
+    },
+    {
+      icon: <FaLinkedin />,
+      id: "linkedin",
+      link: "https://www.linkedin.com/in/anishpanja004/",
+    },
   ],
 };
