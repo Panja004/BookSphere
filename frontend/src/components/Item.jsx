@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { TbShoppingBagPlus } from "react-icons/tb";
 import { ShopContext } from "../context/ShopContext";
-import { books } from "../assets/data"; // Ensure the correct path
-//console.log(books); // Should log the array of books
 
 const Item = ({ book }) => {
   const { currency, addToCart } = useContext(ShopContext);
 
   return (
-    <div>
+    <div className="border border-gray-200 p-4 rounded-lg shadow-md">
       <div className="flexCenter bg-primary p-6 rounded-3xl overflow-hidden relative group">
         <img
           src={book.image}
@@ -34,6 +33,14 @@ const Item = ({ book }) => {
           </h5>
         </div>
         <p className="line-clamp-2 py-1">{book.description}</p>
+
+        {/* "See More" Button */}
+        <Link
+          to={`/book/${book._id}`}
+          className="mt-3 inline-block text-center w-full bg-secondary text-white py-2 rounded-md hover:bg-secondaryDark transition"
+        >
+          See More
+        </Link>
       </div>
     </div>
   );

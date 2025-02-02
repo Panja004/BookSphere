@@ -13,6 +13,7 @@ const ShopContextProvider = (props) => {
   const [books, setBooks] = useState([]);
   const [token, setToken] = useState("");
   const [cartItems, setCartItems] = useState({});
+  const [isLoading, setIsLoading] = useState(true); // Loading state
 
   // Adding items to cart
   const addToCart = async (itemId) => {
@@ -89,7 +90,9 @@ const ShopContextProvider = (props) => {
   };
 
   // Getting all products data
+  // Fetching products
   const getProductsData = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.get(backendUrl + "/api/product/list");
       if (response.data.success) {
@@ -100,6 +103,8 @@ const ShopContextProvider = (props) => {
     } catch (error) {
       console.log(error);
       toast.error(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -130,6 +135,7 @@ const ShopContextProvider = (props) => {
 
   const contextValue = {
     books,
+    isLoading,
     currency,
     navigate,
     token,

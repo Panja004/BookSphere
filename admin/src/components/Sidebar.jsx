@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = ({ setToken }) => {
   return (
-    <div className="max-sm:flexCenter max-xs:pb-3 rounded bg-white pb-3 sm:w-1/5 sm:min-h-screen">
+    <div className="max-sm:flexCenter max-xs:pb-3 rounded bg-white pb-3 sm:w-2/5 sm:min-h-screen">
       <div className="flex flex-col gap-y-6 max-sm:items-center sm:flex-col pt-4 sm:pt-14">
         {/* logo */}
         <Link to={"/"} className="bold-24 flex items-baseline sm:pl-12">

@@ -93,7 +93,7 @@ const Header = () => {
               ) : (
                 <button
                   onClick={() => navigate("/login")}
-                  className="btn-outline flexCenter gap-x-2"
+                  className="btn-outline flexCenter gap-x-2 bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500"
                 >
                   Login
                   <RiUserLine />

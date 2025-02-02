@@ -141,6 +141,27 @@ const UpdateStatus = async (req, res) => {
   }
 };
 
+// Delete Order
+const deleteOrder = async (req, res) => {
+  try {
+    const { orderId } = req.params;
+
+    // Find and delete order
+    const deletedOrder = await orderModel.findByIdAndDelete(orderId);
+
+    if (!deletedOrder) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Order not found" });
+    }
+
+    res.json({ success: true, message: "Order deleted successfully" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 export {
   placeOrder,
   placeOrderStripe,
@@ -148,4 +169,5 @@ export {
   userOrders,
   verifyStripe,
   UpdateStatus,
+  deleteOrder,
 };
