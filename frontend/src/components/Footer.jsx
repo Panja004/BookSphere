@@ -31,13 +31,13 @@ const Footer = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
               recusandae voluptatibus excepturi nostrum cum delectus repellat?
             </p>
-            <div className="flexBetween pl-3 h-[3rem] bg-primary w-full max-w-[333px] rounded-full ring-1 ring-slate-500/5 mb-4">
+            <div className="flexBetween pl-3 h-[4rem] bg-primary w-full max-w-[295px] rounded-full ring-1 ring-slate-500/5 mb-4">
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="bg-transparent border-none outline-none"
               />
-              <button className="btn-secondaryOne relative right-[24px]">
+              <button className="btn-secondaryOne relative right-[68px] h-[4rem]">
                 Subscribe
               </button>
             </div>
