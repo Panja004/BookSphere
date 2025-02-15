@@ -22,7 +22,7 @@ const BookDetails = () => {
         />
         <h2 className="text-2xl font-bold mt-4">{book.name}</h2>
         <p className="text-gray-600">{book.category}</p>
-        <p className="text-xl font-semibold mt-2">${book.price}.00</p>
+        <p className="text-xl font-semibold mt-2">₹{book.price}.00</p>
         <p className="mt-4">{book.description}</p>
 
         {/* Add to Cart Button */}

@@ -3,8 +3,8 @@ import userModel from "../models/userModel.js";
 import Stripe from "stripe";
 
 // Global variables for payment
-const currency = "pkr";
-const deliveryCharges = 10;
+const currency = "inr";
+const deliveryCharges = 100;
 
 // Stripe gateway initialize
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -59,7 +59,7 @@ const placeOrderStripe = async (req, res) => {
         product_data: {
           name: item.name,
         },
-        unit_amount: item.price * 100 * 87, // converting into inr
+        unit_amount: item.price * 100, // converting into inr
       },
       quantity: item.quantity,
     }));
@@ -70,7 +70,7 @@ const placeOrderStripe = async (req, res) => {
         product_data: {
           name: "Delivery charges",
         },
-        unit_amount: deliveryCharges * 100 * 87, // converting into inr
+        unit_amount: deliveryCharges * 100, // converting into inr
       },
       quantity: 1,
     });
