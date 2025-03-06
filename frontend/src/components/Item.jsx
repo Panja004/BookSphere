@@ -7,7 +7,8 @@ const Item = ({ book }) => {
   const { currency, addToCart } = useContext(ShopContext);
 
   return (
-    <div className="border border-gray-200 p-4 rounded-lg shadow-md">
+    <div className="border border-gray-200 p-2 rounded-lg shadow-md pb-4 mt-[-10px]">
+      {/* Adjusted margin-top to move the whole section upwards */}
       <div className="flexCenter bg-primary p-6 rounded-3xl overflow-hidden relative group">
         <img
           src={book.image}
@@ -27,6 +28,8 @@ const Item = ({ book }) => {
         </div>
         <div className="flexBetween pt-1">
           <p className="font-bold capitalize">{book.category}</p>
+        </div>
+        <div className="flexBetween pt-1">
           <h5 className="h5 text-secondaryOne pr-2">
             {currency}
             {book.price}.00
@@ -34,10 +37,10 @@ const Item = ({ book }) => {
         </div>
         <p className="line-clamp-2 py-1">{book.description}</p>
 
-        {/* "See More" Button */}
+        {/* "See More" Button - Ensured proper spacing */}
         <Link
           to={`/book/${book._id}`}
-          className="mt-3 inline-block text-center w-full bg-secondary text-white py-2 rounded-md hover:bg-secondaryDark transition"
+          className="mt-3 block text-center w-full bg-secondary text-white py-2 rounded-md hover:bg-secondaryDark transition"
         >
           See More
         </Link>

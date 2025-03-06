@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -63,28 +63,28 @@
     @apply text-secondary relative after:w-2/3 after:h-[2px] after:rounded-full after:bg-secondary after:absolute after:-bottom-2 after:left-0;
   }
 
-  .btn-white  { 
-    @apply  medium-14 bg-white text-tertiary ring-1 ring-white px-7 py-2.5 rounded-full
+  .btn-white {
+    @apply medium-14 bg-white text-tertiary ring-1 ring-white px-7 py-2.5 rounded-full;
   }
 
-  .btn-dark  { 
-    @apply  medium-14 bg-tertiary text-white ring-1 ring-tertiary px-7 py-2.5 rounded-full
-  }
-  
-  .btn-light  { 
-    @apply  medium-14 bg-primary ring-1 ring-white px-7 py-2.5 rounded-full hover:bg-white transition-all duration-300
+  .btn-dark {
+    @apply medium-14 bg-tertiary text-white ring-1 ring-tertiary px-7 py-2.5 rounded-full;
   }
 
-  .btn-outline  { 
-    @apply  medium-14 bg-white ring-1 ring-white px-7 py-2.5 rounded-full hover:bg-primary transition-all duration-300
+  .btn-light {
+    @apply medium-14 bg-primary ring-1 ring-white px-7 py-2.5 rounded-full hover:bg-white transition-all duration-300;
   }
 
-  .btn-secondary  { 
-    @apply  medium-14 bg-secondary ring-1 ring-secondary text-white px-7 py-2.5 rounded-full  
+  .btn-outline {
+    @apply medium-14 bg-white ring-1 ring-white px-7 py-2.5 rounded-full hover:bg-primary transition-all duration-300;
   }
 
-  .btn-secondaryOne  { 
-    @apply  medium-14 bg-secondaryOne ring-1 ring-secondaryOne text-tertiary px-7 py-2.5 rounded-full  
+  .btn-secondary {
+    @apply medium-14 bg-secondary ring-1 ring-secondary text-white px-7 py-2.5 rounded-full;
+  }
+
+  .btn-secondaryOne {
+    @apply medium-14 bg-secondaryOne ring-1 ring-secondaryOne text-tertiary px-7 py-2.5 rounded-full;
   }
 
   .max-padd-container {

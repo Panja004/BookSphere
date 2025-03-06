@@ -13,7 +13,7 @@ const NewArrivals = () => {
   const { books } = useContext(ShopContext);
   const [newArrivals, setNewArrivals] = useState([]);
 
-  // Extract the first new books as new arivals
+  // Extract the first new books as new arrivals
   useEffect(() => {
     const data = books.slice(0, 7);
     setNewArrivals(data.reverse());
@@ -58,13 +58,15 @@ const NewArrivals = () => {
             spaceBetween: 30,
           },
         }}
-        // Add swiper modules
         modules={[Pagination, Autoplay]}
-        className="h-[455px] sm:h-[480px] xl:h-[499px] mt-5"
+        className="mt-5" // Removed height constraints
       >
         {newArrivals.map((book) => (
-          <SwiperSlide key={book._id}>
-            <Item book={book} />
+          <SwiperSlide key={book._id} className="pb-6">
+            {/* Added padding-bottom for spacing */}
+            <div className="h-full flex flex-col justify-between">
+              <Item book={book} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
